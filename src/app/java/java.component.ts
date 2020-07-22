@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {JavaService} from '../java.service'
+  import { from } from 'rxjs';
 
 @Component({
   selector: 'app-java',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JavaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private svc: JavaService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.svc.getAllJava();
   }
 
 }
+
+
+
