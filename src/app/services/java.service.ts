@@ -25,7 +25,7 @@ export class JavaService {
         let btn2 = document.getElementById("next");
         btn2.addEventListener("click", nextQuestion);
         let btn3 = document.getElementById("back");
-        // btn3.addEventListener("click", lastQuestion);
+        btn3.addEventListener("click", lastQuestion);
 
 
         let x = 1;
@@ -45,7 +45,6 @@ export class JavaService {
 
             function showAnswer() {
               this.answer = (individual[item]);
-              console.log(this.answer);
               document.getElementById("answer").innerHTML = this.answer;
 
             }
@@ -61,9 +60,51 @@ export class JavaService {
 
         function nextQuestion() {
           x++;
-          console.log(x);
           individual = java_data[x];
           document.getElementById("answer").hidden = true;
+
+          if (x > (java_data.length-1)){
+            x = 1;
+          }
+
+          for (let item in individual) {
+            //Questions
+            if (item == "Question") {
+              this.question = individual[item];
+              document.getElementById("question").innerHTML = this.question;
+            }
+            //filtering answers
+            if (item == "Answer") {
+
+              let btn = document.getElementById("show");
+              btn.addEventListener("click", showAnswer);
+
+              function showAnswer() {
+                this.answer = (individual[item]);
+                document.getElementById("answer").hidden = false;
+                document.getElementById("answer").innerHTML = this.answer;
+              }
+            }
+            //to show the number in the list on the frontend
+            if (item == "id") {
+              this.id = individual[item];
+              document.getElementById("id").innerHTML = this.id;
+
+            }
+          }
+
+        }
+
+        function lastQuestion() {
+          --x;
+
+          if(x < 1){
+            /*
+            comment will pop up here add event listener for a message to pop up
+            */
+          }
+          console.log(x);
+          individual = java_data[x];
 
           for (let item in individual) {
             //Questions
@@ -80,7 +121,6 @@ export class JavaService {
               function showAnswer() {
                 this.answer = (individual[item]);
                 console.log(this.answer);
-                document.getElementById("answer").hidden = false;
                 document.getElementById("answer").innerHTML = this.answer;
               }
             }
@@ -95,44 +135,6 @@ export class JavaService {
 
 
         }
-        // function lastQuestion() {
-        //   x--;
-
-        //   if(x < 1){
-        //     console.log("there are no questions back here");
-        //   }
-        //   console.log(x);
-        //   individual = java_data[x];
-
-        //   for (let item in individual) {
-        //     //Questions
-        //     if (item == "Question") {
-        //       this.question = individual[item];
-        //       document.getElementById("question").innerHTML = this.question;
-        //     }
-        //     //filtering answers
-        //     if (item == "Answer") {
-
-        //       let btn = document.getElementById("show");
-        //       btn.addEventListener("click", showAnswer);
-
-        //       function showAnswer() {
-        //         this.answer = (individual[item]);
-        //         console.log(this.answer);
-        //         document.getElementById("answer").innerHTML = this.answer;
-        //       }
-        //     }
-
-        //     //to show the number in the list on the frontend
-        //     if (item == "id") {
-        //       this.id = individual[item];
-        //       document.getElementById("id").innerHTML = this.id;
-
-        //     }
-        //   }
-
-
-        // }
 
 
       }

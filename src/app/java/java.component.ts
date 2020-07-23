@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {JavaService} from '../java.service'
+import {JavaService} from '../services/java.service'
   import { from } from 'rxjs';
 
 @Component({
