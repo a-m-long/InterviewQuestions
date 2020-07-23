@@ -97,7 +97,6 @@ export class JavaService {
 
         function lastQuestion() {
           --x;
-
           if(x < 1){
             /*
             comment will pop up here add event listener for a message to pop up
