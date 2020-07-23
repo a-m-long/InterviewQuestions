@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { newArray } from '@angular/compiler/src/util';
 
 @Injectable({
   providedIn: 'root'
@@ -7,9 +8,9 @@ import { HttpClient } from '@angular/common/http';
 export class JavaService {
 
   javaData: JSON;
-  answer: String[]; 
-  question: String[]; 
-  id: number[];
+  answer: string;
+  question: string;
+  id: string;
 
 
   constructor(private http: HttpClient) { }
@@ -17,28 +18,126 @@ export class JavaService {
   getAllJava() {
     this.http.get('https://flashcards-23d9f.firebaseio.com/1ehwLfTSExsC-kgy5DBtTG6OEL59rMCmRcUM47364uq4/Sheet1.json'
     ).subscribe(data => {
-      let java_data:any = this.javaData = data as JSON;
+      let java_data: any = this.javaData = data as JSON;
 
-      for (let i in java_data){
-        let individual = java_data[i];
-        for (let item in individual){
+      for (let i = 0; i < java_data.length; i++) {
+
+        let btn2 = document.getElementById("next");
+        btn2.addEventListener("click", nextQuestion);
+        let btn3 = document.getElementById("back");
+        // btn3.addEventListener("click", lastQuestion);
+
+
+        let x = 1;
+        let individual = java_data[x];
+
+        for (let item in individual) {
           //Questions
-          if(item=="Question"){
-            this.question.push(individual[item]);
+          if (item == "Question") {
+            this.question = individual[item];
+            document.getElementById("question").innerHTML = this.question;
           }
           //filtering answers
-          if (item =="Answer"){
-            this.answer.push(individual[item])
-            console.log(individual[item]);
+          if (item == "Answer") {
+
+            let btn = document.getElementById("show");
+            btn.addEventListener("click", showAnswer);
+
+            function showAnswer() {
+              this.answer = (individual[item]);
+              console.log(this.answer);
+              document.getElementById("answer").innerHTML = this.answer;
+
+            }
+
           }
           //to show the number in the list on the frontend
-          if(item =="id"){
-            this.id.push(individual[item]);
+          if (item == "id") {
+            this.id = individual[item];
+            document.getElementById("id").innerHTML = this.id;
+
           }
         }
+
+        function nextQuestion() {
+          x++;
+          console.log(x);
+          individual = java_data[x];
+          document.getElementById("answer").hidden = true;
+
+          for (let item in individual) {
+            //Questions
+            if (item == "Question") {
+              this.question = individual[item];
+              document.getElementById("question").innerHTML = this.question;
+            }
+            //filtering answers
+            if (item == "Answer") {
+
+              let btn = document.getElementById("show");
+              btn.addEventListener("click", showAnswer);
+
+              function showAnswer() {
+                this.answer = (individual[item]);
+                console.log(this.answer);
+                document.getElementById("answer").hidden = false;
+                document.getElementById("answer").innerHTML = this.answer;
+              }
+            }
+
+            //to show the number in the list on the frontend
+            if (item == "id") {
+              this.id = individual[item];
+              document.getElementById("id").innerHTML = this.id;
+
+            }
+          }
+
+
+        }
+        // function lastQuestion() {
+        //   x--;
+
+        //   if(x < 1){
+        //     console.log("there are no questions back here");
+        //   }
+        //   console.log(x);
+        //   individual = java_data[x];
+
+        //   for (let item in individual) {
+        //     //Questions
+        //     if (item == "Question") {
+        //       this.question = individual[item];
+        //       document.getElementById("question").innerHTML = this.question;
+        //     }
+        //     //filtering answers
+        //     if (item == "Answer") {
+
+        //       let btn = document.getElementById("show");
+        //       btn.addEventListener("click", showAnswer);
+
+        //       function showAnswer() {
+        //         this.answer = (individual[item]);
+        //         console.log(this.answer);
+        //         document.getElementById("answer").innerHTML = this.answer;
+        //       }
+        //     }
+
+        //     //to show the number in the list on the frontend
+        //     if (item == "id") {
+        //       this.id = individual[item];
+        //       document.getElementById("id").innerHTML = this.id;
+
+        //     }
+        //   }
+
+
+        // }
+
+
       }
 
-      
+
 
     })
   }
