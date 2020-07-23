@@ -6,6 +6,13 @@ import { AppComponent } from './app.component';
 import { JavaComponent } from './java/java.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { Routes, RouterModule } from '@angular/router'; // CLI imports router
+
+const routes: Routes = [
+  {path: '', component:HomeComponent},
+  {path: 'java', component:JavaComponent},
+
+]
 
 @NgModule({
   declarations: [
@@ -17,6 +24,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
