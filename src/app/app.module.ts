@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { JavaComponent } from './java/java.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { Routes, RouterModule } from '@angular/router'; // CLI imports router
+import { Routes, RouterModule } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
+import { SqlComponent } from './sql/sql.component'; // CLI imports router
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
@@ -19,7 +21,9 @@ const routes: Routes = [
     AppComponent,
     JavaComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent,
+    SqlComponent
   ],
   imports: [
     BrowserModule,
