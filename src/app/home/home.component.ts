@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  sql_url: string;
+  java_url:string;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+
+
   }
 
 }

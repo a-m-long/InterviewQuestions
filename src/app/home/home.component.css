@@ -46,17 +46,19 @@
     margin-top: 500px ;
     height: auto;
     text-align: center;
+    
 
 }
 
 #flashcard{
-    position: absolute;
-   
+    position: relative;  
     width: 30%;
     text-align: center;
     border-radius: 20px;
     border-color: black;
     height: auto;
+    display: inline-table;
+    margin: 20px;
     
 }
 #picture{
