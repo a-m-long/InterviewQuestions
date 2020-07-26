@@ -27,3 +27,29 @@
     top:0;
    
 }
+
+#container2{
+    bottom: 0px;
+    background-color: blueviolet;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    right: 0;
+    position: absolute;
+
+   
+}
+#random{
+    display: inline-table;
+    position: relative;
+    left: 20px;
+    margin: 50px;
+    width: 25%;
+    letter-spacing: 2px;
+}
+#footer_header{
+    font-size: 20px;
+}
+#footer_text{
+    font-size: 15px;
+}
