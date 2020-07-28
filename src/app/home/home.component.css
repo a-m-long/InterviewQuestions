@@ -1,3 +1,72 @@
+@media screen and (max-width: 700px) {
+
+    #fullpageheader{
+        overflow: visible;
+        position:absolute;
+        display: inline-flex;
+        
+        
+    }
+    #everything{
+        display: inline-table;
+        overflow: visible;
+        position: absolute;  
+    }
+    #second_content{
+        overflow: visible;
+        display: inline-table;
+        position: absolute;
+        max-width: 100%;
+        left: 80px;
+        font-size: 15px;
+    }
+    #container{
+        overflow: visible;
+        max-width: 100%;
+        display: inline-flex;
+        position: relative;
+        left: 50px;
+
+    }
+    #content{
+       width: 100%;
+    }
+    #picture{
+        left: -12px;
+    }
+    #description{
+        visibility: hidden;
+    }
+    #container{
+        display: block;
+        margin-left: 75px;
+        
+    }
+    #random{
+        max-width: 100%;
+        position: absolute;
+        float: left;
+        
+      
+     
+
+        
+    }
+  
+
+  
+}
+@media screen and (max-width: 1100px) {
+    #description{
+        visibility: hidden;
+    }
+}
+
+
+
+
+
+
 #everything{
     display: inline-block;
     height: auto;
