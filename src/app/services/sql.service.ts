@@ -66,8 +66,8 @@ export class SqlService {
           individual = sql_data[x];
           document.getElementById("answer").hidden = true;
 
-          if (x > (sql_data.length-1)){
-            x = 1;
+          if (x > (sql_data.length-2)){
+            x = 0;
           }
 
           for (let item in individual) {
@@ -105,6 +105,9 @@ export class SqlService {
             /*
             comment will pop up here add event listener for a message to pop up
             */
+            let max = sql_data.length -1; 
+            x=max;
+            console.log(x);
           }
           console.log(x);
           individual = sql_data[x];

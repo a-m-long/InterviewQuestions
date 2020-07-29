@@ -20,12 +20,15 @@ export class JavaService {
     ).subscribe(data => {
       let java_data: any = this.javaData = data as JSON;
 
+      let max = java_data[0]
+
       for (let i = 0; i < java_data.length; i++) {
 
         let btn2 = document.getElementById("next");
         btn2.addEventListener("click", nextQuestion);
         let btn3 = document.getElementById("back");
         btn3.addEventListener("click", lastQuestion);
+        
 
 
         let x = 1;
@@ -63,8 +66,8 @@ export class JavaService {
           individual = java_data[x];
           document.getElementById("answer").hidden = true;
 
-          if (x > (java_data.length-1)){
-            x = 1;
+          if (x > java_data.length-2){
+            x = 0;
           }
 
           for (let item in individual) {
@@ -101,6 +104,11 @@ export class JavaService {
             /*
             comment will pop up here add event listener for a message to pop up
             */
+
+            let max = java_data.length -1; 
+            x=max;
+            console.log(x);
+        
           }
           console.log(x);
           individual = java_data[x];
