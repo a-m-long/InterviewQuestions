@@ -476,6 +476,7 @@ class JavaService {
     getAllJava() {
         this.http.get('https://flashcards-23d9f.firebaseio.com/1ehwLfTSExsC-kgy5DBtTG6OEL59rMCmRcUM47364uq4/Sheet1.json').subscribe(data => {
             let java_data = this.javaData = data;
+            let max = java_data[0];
             for (let i = 0; i < java_data.length; i++) {
                 let btn2 = document.getElementById("next");
                 btn2.addEventListener("click", nextQuestion);
@@ -508,8 +509,8 @@ class JavaService {
                     x++;
                     individual = java_data[x];
                     document.getElementById("answer").hidden = true;
-                    if (x > (java_data.length - 1)) {
-                        x = 1;
+                    if (x > java_data.length - 2) {
+                        x = 0;
                     }
                     for (let item in individual) {
                         //Questions
@@ -540,6 +541,9 @@ class JavaService {
                         /*
                         comment will pop up here add event listener for a message to pop up
                         */
+                        let max = java_data.length - 1;
+                        x = max;
+                        console.log(x);
                     }
                     console.log(x);
                     individual = java_data[x];
@@ -680,8 +684,8 @@ class SqlService {
                     x++;
                     individual = sql_data[x];
                     document.getElementById("answer").hidden = true;
-                    if (x > (sql_data.length - 1)) {
-                        x = 1;
+                    if (x > (sql_data.length - 2)) {
+                        x = 0;
                     }
                     for (let item in individual) {
                         //Questions
@@ -713,6 +717,9 @@ class SqlService {
                         /*
                         comment will pop up here add event listener for a message to pop up
                         */
+                        let max = sql_data.length - 1;
+                        x = max;
+                        console.log(x);
                     }
                     console.log(x);
                     individual = sql_data[x];
