@@ -101,6 +101,7 @@ export class SqlService {
 
         function lastQuestion() {
           --x;
+          document.getElementById("answer").hidden = true;
           if(x < 1){
             /*
             comment will pop up here add event listener for a message to pop up
