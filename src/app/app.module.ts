@@ -15,6 +15,7 @@ const routes: Routes = [
   {path: '', component:HomeComponent},
   {path: 'java', component:JavaComponent},
   {path: 'sql', component:SqlComponent},
+  {path: 'spring', component:SpringComponent},
 
 ]
 
