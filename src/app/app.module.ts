@@ -8,7 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
-import { SqlComponent } from './sql/sql.component'; // CLI imports router
+import { SqlComponent } from './sql/sql.component';
+import { SpringComponent } from './spring/spring.component'; // CLI imports router
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
@@ -24,7 +25,8 @@ const routes: Routes = [
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    SqlComponent
+    SqlComponent,
+    SpringComponent
   ],
   imports: [
     BrowserModule,
