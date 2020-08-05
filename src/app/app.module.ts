@@ -9,7 +9,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { SqlComponent } from './sql/sql.component';
-import { SpringComponent } from './spring/spring.component'; // CLI imports router
+import { SpringComponent } from './spring/spring.component';
+import { KafkaComponent } from './kafka/kafka.component'; // CLI imports router
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
@@ -27,7 +28,8 @@ const routes: Routes = [
     NavbarComponent,
     FooterComponent,
     SqlComponent,
-    SpringComponent
+    SpringComponent,
+    KafkaComponent
   ],
   imports: [
     BrowserModule,
