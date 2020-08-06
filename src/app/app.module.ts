@@ -10,7 +10,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { SqlComponent } from './sql/sql.component';
 import { SpringComponent } from './spring/spring.component';
-import { KafkaComponent } from './kafka/kafka.component'; // CLI imports router
+import { KafkaComponent } from './kafka/kafka.component';
+import { SparkComponent } from './spark/spark.component'; // CLI imports router
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
@@ -29,7 +30,8 @@ const routes: Routes = [
     FooterComponent,
     SqlComponent,
     SpringComponent,
-    KafkaComponent
+    KafkaComponent,
+    SparkComponent
   ],
   imports: [
     BrowserModule,
