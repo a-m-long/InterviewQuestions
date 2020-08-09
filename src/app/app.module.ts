@@ -18,6 +18,7 @@ const routes: Routes = [
   {path: 'java', component:JavaComponent},
   {path: 'sql', component:SqlComponent},
   {path: 'spring', component:SpringComponent},
+  {path: 'kafka', component:KafkaComponent},
 
 ]
 

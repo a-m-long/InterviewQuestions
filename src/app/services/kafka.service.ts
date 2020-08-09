@@ -14,9 +14,10 @@ export class KafkaService {
   constructor(private http: HttpClient) { }
 
   getAllKafka() {
-    this.http.get('https://flashcards-23d9f.firebaseio.com/1ehwLfTSExsC-kgy5DBtTG6OEL59rMCmRcUM47364uq4/Sheet1.json'
+    this.http.get('https://flashcards-23d9f.firebaseio.com/1X919vgkpc8pJgvX3fDrboIu-l0sZ0gQjCMryx8jV20w/Sheet1.json'
     ).subscribe(data => {
       let kafka_data: any = this.kafkaData = data as JSON;
+      console.log(kafka_data);
 
       let max = kafka_data[0]
 
@@ -34,12 +35,12 @@ export class KafkaService {
 
         for (let item in individual) {
           //Questions
-          if (item == "Question") {
+          if (item == "question") {
             this.question = individual[item];
             document.getElementById("question").innerHTML = this.question;
           }
           //filtering answers
-          if (item == "Answer") {
+          if (item == "answer") {
 
             let btn = document.getElementById("show");
             btn.addEventListener("click", showAnswer);
@@ -70,12 +71,12 @@ export class KafkaService {
 
           for (let item in individual) {
             //Questions
-            if (item == "Question") {
+            if (item == "question") {
               this.question = individual[item];
               document.getElementById("question").innerHTML = this.question;
             }
             //filtering answers
-            if (item == "Answer") {
+            if (item == "answer") {
 
               let btn = document.getElementById("show");
               btn.addEventListener("click", showAnswer);
@@ -114,12 +115,12 @@ export class KafkaService {
 
           for (let item in individual) {
             //Questions
-            if (item == "Question") {
+            if (item == "question") {
               this.question = individual[item];
               document.getElementById("question").innerHTML = this.question;
             }
             //filtering answers
-            if (item == "Answer") {
+            if (item == "answer") {
 
               let btn = document.getElementById("show");
               btn.addEventListener("click", showAnswer);
