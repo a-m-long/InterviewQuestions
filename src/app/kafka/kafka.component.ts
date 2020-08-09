@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {KafkaService} from '../services/kafka.service';
 
 @Component({
   selector: 'app-kafka',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KafkaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private svc: KafkaService) { }
 
-  ngOnInit(): void {
+
+
+
+  ngOnInit() {
+
+    this.svc.getAllKafka();
+
   }
 
 }

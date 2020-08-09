@@ -3,8 +3,7 @@
     #fullpageheader{
         overflow: visible;
         position:absolute;
-        display: inline-flex;
-        
+        display: inline-flex;    
         
     }
     #everything{
@@ -201,7 +200,6 @@
     position: relative;
     overflow: hidden;
 
-   
 }
 #random{
     display: inline-table;
