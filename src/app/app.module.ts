@@ -11,7 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SqlComponent } from './sql/sql.component';
 import { SpringComponent } from './spring/spring.component';
 import { KafkaComponent } from './kafka/kafka.component';
-import { SparkComponent } from './spark/spark.component'; // CLI imports router
+import { SparkComponent } from './spark/spark.component';
+import { OWASPComponent } from './owasp/owasp.component'; // CLI imports router
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'sql', component:SqlComponent},
   {path: 'spring', component:SpringComponent},
   {path: 'kafka', component:KafkaComponent},
+  {path: 'owasp', component:OWASPComponent},
 
 ]
 
@@ -32,8 +34,10 @@ const routes: Routes = [
     SqlComponent,
     SpringComponent,
     KafkaComponent,
-    SparkComponent
+    SparkComponent,
+    OWASPComponent
   ],
+  
   imports: [
     BrowserModule,
     HttpClientModule,

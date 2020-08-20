@@ -10,6 +10,8 @@
         display: inline-table;
         overflow: visible;
         position: absolute;  
+        height: auto;
+        background-color: lavender;
     }
     #second_content{
         overflow: visible;
@@ -44,26 +46,14 @@
     #random{
         max-width: 100%;
         position: absolute;
-        float: left;
-        
-      
-     
-
-        
+        float: left; 
     }
-  
-
-  
 }
 @media screen and (max-width: 1100px) {
     #description{
         visibility: hidden;
     }
 }
-
-
-
-
 
 
 #everything{
@@ -73,6 +63,7 @@
     position: absolute;
     right: 0px;
     top:0;
+    background-color: lavender;
 }
 #fullpageheader{
     /* position: fixed; */
@@ -148,6 +139,7 @@
     text-align: center;
     overflow: hidden;
     background-color: lavender;
+    margin-bottom: 20%;
 
 
 }
@@ -199,6 +191,9 @@
     width: 100%;
     position: relative;
     overflow: hidden;
+    position: absolute;
+    margin-top: 20%;
+
 
 }
 #random{
