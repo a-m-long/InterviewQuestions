@@ -55,7 +55,8 @@
     z-index: 1;
     position: absolute;
     position: static;
-    height: auto;
+    height: 200px;
+    overflow-y: scroll;
     
   }
 
