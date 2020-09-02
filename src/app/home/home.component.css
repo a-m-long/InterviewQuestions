@@ -1,59 +1,90 @@
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 580px) {
 
+    #description{
+       display: none;
+    }
     #fullpageheader{
-        overflow: visible;
-        position:absolute;
-        display: inline-flex;    
-        
+        top: 90px;
+        padding-bottom: 100px;
+       
     }
     #everything{
-        display: inline-table;
-        overflow: visible;
-        position: absolute;  
-        height: auto;
-        background-color: lavender;
+        width: 100% !important;
+        overflow: visible !important;  
     }
-    #second_content{
-        overflow: visible;
-        display: inline-table;
-        position: absolute;
-        max-width: 100%;
-        left: 80px;
-        font-size: 15px;
+    #the_image{
+       display: none;
     }
-    #container{
-        overflow: visible;
-        max-width: 100%;
-        display: inline-flex;
+    #slider{
+        display: none;
+    }
+    #welcome{
+        float: none;
         position: relative;
-        left: 50px;
-
+        width: 100% !important;
+    }
+   
+    #left_text{
+        size: 20px !important ;
+        float: none;
+        text-align: center;
     }
     #content{
-       width: 100%;
+        width: 100%;
+        float: right !important;
+        margin-bottom: 200% !important;
     }
-    #picture{
-        left: -12px;
-    }
-    #description{
-        visibility: hidden;
-    }
-    #container{
-        display: block;
-        margin-left: 75px;
-        
-    }
-    #random{
-        max-width: 100%;
-        position: absolute;
-        float: left; 
-    }
+    #flashcard{
+        margin-left: 110px !important;
+     }
+
+   
 }
-@media screen and (max-width: 1100px) {
+
+@media screen and (min-width: 700px) {
+
     #description{
-        visibility: hidden;
+       display: none;
     }
+    #fullpageheader{
+        top: 90px;
+        padding-bottom: 100px;
+       
+    }
+    #everything{
+        width: 100% !important;
+        overflow: visible !important;  
+    }
+    #the_image{
+       display: none;
+    }
+    #slider{
+        display: none;
+    }
+    #welcome{
+        float: none;
+        position: relative;
+        width: 100% !important;
+    }
+   
+    #left_text{
+        size: 20px !important ;
+        float: none;
+        text-align: center;
+    }
+    #content{
+        width: 100%;
+        float: right !important;
+        margin-bottom: 80% !important;
+    }
+    #flashcard{
+        margin-left: 140px !important;
+     }
+
+   
 }
+
+
 
 
 #everything{
@@ -64,10 +95,11 @@
     right: 0px;
     top:0;
     background-color: lavender;
+
 }
 #fullpageheader{
     /* position: fixed; */
-    /* position: static; */
+    position: static;
     position: absolute;
     width: 100%;
     height: auto;
@@ -86,6 +118,8 @@
     width: 55%;
     position: relative;
     padding: 20px;
+    position: static;
+
 
     ;
     /* padding-bottom: 400px; */
@@ -97,6 +131,7 @@
     letter-spacing: 2px;
     position: relative;
     margin-top: 18%;
+    position: static;
     
 }
 #the_image{
@@ -118,6 +153,7 @@
     text-align: center;
     margin-top: 20%;
     background: url('https://unsplash.com/photos/02z1I7gv4ao');
+    position: static;
 
     
     
@@ -130,6 +166,7 @@
     float: right;
     position: relative;
     margin-top: 600px;
+    position: static;
 }
 
 #content{
@@ -139,7 +176,8 @@
     text-align: center;
     overflow: hidden;
     background-color: lavender;
-    margin-bottom: 20%;
+    margin-bottom: 30%;
+    margin-top: 20px;
 
 
 }
@@ -149,6 +187,7 @@
     position: relative;
     padding: 60px;
     text-align: center;
+    position: static;
 }
 
 #flashcard{
@@ -203,10 +242,12 @@
     margin: 50px;
     width: 25%;
     letter-spacing: 2px;
+    position: static;
 }
 #footer_header{
     font-size: 20px;
 }
 #footer_text{
     font-size: 15px;
+    
 }
