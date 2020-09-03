@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SqlService} from '../services/sql.service'
+import {SqlService} from 'src/app/services/sql.service'
 
 @Component({
   selector: 'app-sql',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CybersecurityService } from '../services/cybersecurity.service';
+import { CybersecurityService } from 'src/app/services/cybersecurity.service';
 
 @Component({
   selector: 'app-cybersecurity',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {OWASPService} from'../services/owasp.service';
+import {OWASPService} from'src/app/services/owasp.service';
 
 @Component({
   selector: 'app-owasp',

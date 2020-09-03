@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SpringService} from '../services/spring.service'
+import {SpringService} from 'src/app/services/spring.service'
 
 @Component({
   selector: 'app-spring',
