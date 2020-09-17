@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 import { AppComponent } from './app.component';
 import { JavaComponent } from 'src/app/Note_Components/java/java.component';
@@ -17,6 +19,7 @@ import { CybersecurityComponent } from 'src/app/Note_Components/cybersecurity/cy
 import { JspComponent } from 'src/app/Note_Components/jsp/jsp.component'; // CLI imports router
 import {BlogComponent} from './blog/blog.component';
 import {AboutComponent} from './about/about.component';
+import { environment } from '../environments/environment';
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
@@ -50,6 +53,8 @@ const routes: Routes = [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

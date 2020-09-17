@@ -1,39 +1,8 @@
-@media  screen and (min-width: 200px) and (max-width: 300px){
+@media screen and (min-width: 200px) and (max-width: 300px){
 
     #fullpageheader{
         margin-top: 80% !important;
-        margin-bottom: 200% !important;
-    }
- 
-    #slider{
-        float: none !important;
-        width: 100% !important;
-        height: 100% !important;
-    }
-
-    #second_part{
-        margin-top: 200% !important;
-    }
-    #second_part h1{
-        font-size: 150% !important;
-    }
-    #notes{
-        min-width: 100% !important;
-        right: .5% !important;
-    }
-    #recent_notes{
-        margin-bottom: 300% !important;
-        margin-top: 10% !important;
-        
-    }
-}
-
-
-
-@media  screen and (max-width: 400px){
-
-    #fullpageheader{
-        margin-top: 80% !important;
+        margin-bottom: 1% !important;
     }
  
     #slider{
@@ -53,6 +22,35 @@
         right: .5% !important;
     }
     #recent_notes{
+        margin-bottom: 300% !important;
+        margin-top: 10% !important;
+        
+    }
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 400px){
+    #fullpageheader{
+        margin-top: 60% !important;
+    }
+ 
+    #slider{
+        float: none !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    #second_part{
+        margin-top: 126% !important;
+    }
+    #second_part h1{
+        font-size: 150% !important;
+    }
+    #notes{
+        min-width: 100% !important;
+        right: .5% !important;
+    }
+    #recent_notes{
         margin-bottom: 240% !important;
         margin-top: 10% !important;
         
@@ -62,8 +60,7 @@
 
 
 
-@media  screen and (max-width: 500px){
-
+@media screen and (min-width: 400px) and (max-width: 500px){
     #fullpageheader{
         margin-top: 40% !important;
     }
@@ -92,7 +89,8 @@
 }
 
 
-@media  screen and (max-width: 600px){
+@media screen and (min-width: 500px) and (max-width: 600px){
+
 
     #fullpageheader{
         margin-top: 20% !important;
@@ -121,16 +119,29 @@
     }
 }
 
+@media screen and (min-width: 600px) and (max-width: 800px){
 
-@media  screen and (max-width: 900px){
 
     #fullpageheader{
-        margin-top: 30% !important;
-        height: 25% !important;
+        margin-top: 15% !important;
+        height: 20% !important;
+    }
+    #welcome{
+        margin-top: -9%;
     }
 
+  
     #welcome h1{
-        font-size: 100% !important;
+        font-size: 150% !important;
+    }
+
+    #welcome
+
+    #welcome p{
+        font-size: 70% !important;
+    }
+    #welcome a{
+        font-size: 50% !important;
     }
     #description{
         display: none !important;
@@ -141,7 +152,7 @@
  
    
     #second_part{
-        margin-top: 79.5% !important;
+        margin-top: 50.5% !important;
     }
     #second_part h1{
         font-size: 120% !important;
@@ -157,14 +168,64 @@
     }
 }
 
-@media  screen and (max-width: 1100px){
+
+@media screen and (min-width: 800px) and (max-width: 900px){
+   
+    #fullpageheader{
+        /* margin-top: 25% !important; */
+        /* height: 50% !important; */
+    }
+  
+
+  
+    #welcome h1{
+        font-size: 200% !important;
+    }
+
+    #welcome
+
+    #welcome p{
+        font-size: 70% !important;
+    }
+    #welcome a{
+        font-size: 50% !important;
+    }
+    #description{
+        display: none !important;
+    }
+    #slider{
+        height: 100% !important;
+    }
+ 
+   
+    #second_part{
+        margin-top: 40.5% !important;
+    }
+    #second_part h1{
+        font-size: 120% !important;
+    }
+   
+    #recent_notes{
+       margin-bottom: 80% !important;
+        
+    }
+
+    #name{
+        font-size: 150% !important;
+    }
+
+}
+
+
+@media screen and (min-width: 900px) and (max-width: 1200px){
+
 
   
     #fullpageheader{
-        padding-bottom: 30% !important;
+        /* padding-bottom: 30% !important; */
     }
     #second_part{
-        margin-top: 60.7% !important;
+        margin-top: 36.7% !important;
     }
     #second_part h1{
         font-size: 200% !important;
