@@ -8,8 +8,6 @@ import {SqlModel} from '../models/sqlmodel'
 })
 export class HomeComponent implements OnInit {
 
- 
-
   constructor() {
     
    }

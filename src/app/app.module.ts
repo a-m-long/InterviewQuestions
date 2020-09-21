@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+// import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { AngularFireModule } from '@angular/fire';
+// import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 
 import { AppComponent } from './app.component';
@@ -18,6 +21,7 @@ import { CybersecurityComponent } from 'src/app/Note_Components/cybersecurity/cy
 import { JspComponent } from 'src/app/Note_Components/jsp/jsp.component'; // CLI imports router
 import {BlogComponent} from './blog/blog.component';
 import {AboutComponent} from './about/about.component';
+// import { AuthRoutingModule } from './auth-routing.module';
 
 
 const routes: Routes = [
@@ -29,6 +33,17 @@ const routes: Routes = [
   {path: 'owasp', component:OWASPComponent},
   {path: 'cybersecurity', component:CybersecurityComponent},
 ]
+
+
+// const firebaseConfig = {
+//   apiKey: "AIzaSyD3EF4JUaHR4hB5mNwp0W2QQsEogQkz888",
+//   authDomain: "blog-e5c21.firebaseapp.com",
+//   databaseURL: "https://blog-e5c21.firebaseio.com",
+//   projectId: "blog-e5c21",
+//   storageBucket: "blog-e5c21.appspot.com",
+//   messagingSenderId: "1056648336695",
+ 
+// };
 
 @NgModule({
   declarations: [
@@ -52,6 +67,12 @@ const routes: Routes = [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
+    // FormsModule,
+    // ReactiveFormsModule,
+    // AngularFireModule.initializeApp(firebaseConfig),
+    // AngularFirestoreModule,
+    // AuthRoutingModule,
+
    
   ],
   providers: [],

@@ -310,6 +310,7 @@
     margin: 1%;
     right: -2%;
     position: relative;
+    margin-bottom: 10%;
 }
 
 
@@ -371,6 +372,8 @@
     
     
 }
+
+
 #picture{
     height: auto;
     position: relative;
@@ -411,7 +414,7 @@
     position: relative;
     overflow: hidden;
     position: absolute;
-    margin-top: 60%;
+    /* margin-top: 70%; */
     
     
 
